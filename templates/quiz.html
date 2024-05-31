@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generated Quiz</title>
+  <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}" />
+  <script src="https://kit.fontawesome.com/2d3ccaa5e7.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+ <style>
+    body {
+      background-image: url('/static/img/Question_image.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: 100% 100%;
+      
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      position: relative;
+    }
+
+    .container {
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 40px;
+      width: 600px;
+      max-width: 100%;
+      text-align: center;
+    }
+
+    h3 {
+      color: #333;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: #555;
+      font-size: 16px;
+      line-height: 1.5;
+      white-space: pre-line;
+    }
+
+    button {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      border: 2px solid gray;
+      padding: 5px;
+      border-radius: 5px;
+      font-size: 16px;
+      color: red;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: black;
+      color: white;
+    }
+  </style>  
+</head>
+<body>
+  <a href="\Homepage.html"><button id="backArrow"><i class="fa-solid fa-arrow-left-long"></i></button></a>
+  <div class="container">
+    <h3 class="mb-4">Generated Quiz:</h3>
+    <p class="text-gray-600">{{quiz}}</p>
+  </div>
+</body>
+</html>
