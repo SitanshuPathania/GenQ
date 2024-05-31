@@ -1,0 +1,7 @@
+body{
+    background-image: url('/static/img/Question_image.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    color: white;
+}

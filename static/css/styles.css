@@ -1,0 +1,280 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:20px 100px;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    color: white;
+}
+
+.nav-bar a{
+    text-decoration: none;
+    margin-left: 15px;
+    position: relative;
+    color: white;
+}
+
+.nav-bar a::after{
+    content: '';
+    position:absolute;
+    
+    left: 0;
+    bottom:-10px;
+    width:100%;
+    height:3px;
+    background: black;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: transform.5s;
+}
+
+.btn{
+    padding:10px 30px;
+    margin-left: 20px;
+    background-color: transparent;
+    transition: .5s;
+    border-radius: 5px;
+    border:1px solid white;
+    color: white;
+    font-size: medium;
+}
+
+.nav-bar a:hover::after{
+    transform: scaleX(1);
+}
+
+.btn:hover{
+    background-color: white;
+    cursor: pointer;
+    color:black;
+    
+}
+
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('/static/img/Home_page.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.display-flex{
+    display: flex;
+}
+
+main{
+    position:relative;
+    width: 400px;
+    height: 440px;
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+    overflow: hidden;
+    transition: transform .5s ease, height .2s ease;
+    
+}
+
+main.active{
+    height: 520px;
+}
+
+.Login-box{
+    width:100%;
+    padding:40px;
+    
+}
+
+main .Login-box{
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+
+
+main.active .Login-box{
+    transition: none;
+    transform: translateX(-400px);
+}
+
+main .Register-box{
+    position: absolute;
+    transition: none;
+    transform: translateX(400px);
+}
+
+main.active .Register-box{
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+
+.Login-box h2{
+    font-size: 35px;
+    text-align: center;
+}
+
+main.active .Login-box.Register-link{
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+
+
+
+.input-box{
+    position: relative;
+    width:100%;
+    height:50px;
+    border-bottom: 2px solid black;
+    margin: 30px 0;
+}
+
+.input-box p{
+    position: absolute;
+    top:50%;
+    left:5px;
+    transform: translateY(-25%);
+    color: black;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+}
+
+
+.input-box input:focus~p,
+.input-box input:valid~p {
+    top: -5px;
+    left: 1px;
+}
+
+
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.input-box i{
+    position: absolute;
+    right:8px;
+    font-size: 18px;
+    color:black;
+    line-height: 57px;
+}
+
+.remember-forgot{
+    font-weight: 500;
+    margin:-15px 0 15px;
+    justify-content: space-between;
+    font-size: 16px;
+}
+
+.remember-forgot input{
+    margin-right: 3px;
+}
+
+.remember-forgot a{
+    text-decoration: none;
+    color: black;
+}
+
+.remember-forgot a:hover{
+    text-decoration: underline;
+}
+
+.btn2{
+    width:100%;
+    height:50px;
+    background: rgb(113, 12, 12);
+    border:none;
+    color:white;
+    outline: none;
+    border-radius: 5px;
+    cursor:pointer;
+    font-weight: 500;
+    font-size: 15px;
+}
+.register{
+    
+    margin-top: 5px;
+}
+
+.register a{
+    text-decoration: none;
+    color: black;
+}
+.register a:hover{
+    text-decoration: underline;
+}
+
+.close-icon{
+    position:absolute;
+    top:-16px;
+    right:0;
+    width:45px;
+    height:45px;
+    background: brown;
+    font-size: 20px;
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor:pointer;
+}
+
+.Register-box{
+    width:100%;
+    padding:40px;
+    position: absolute;
+    transform: translateX(400px);
+}
+
+.Register-box h2{
+    font-size: 35px;
+    text-align: center;
+}
+
+
+main.active-popup{
+    transform: scale(1);
+}
+
+
+#logout{
+    display: none;
+}
+.intro-para{
+    color: white;
+    width: 25%;
+    margin-left: 50px;
+    align-items: right;
+    
+}
+
+.display-none{
+    display: none;
+}
+
+
+
+
