@@ -6,7 +6,6 @@ Automated Question Generation: Simply provide a passage and an answer, and our a
 User-Friendly Interface: Easily input text passages and review generated questions.
 Seamless Experience: Designed to offer an intuitive and efficient user experience.
 <br>
-
 ## Login Page:
 <br>
 Users can log in or register using their credentials, with information securely stored in the MongoDB Atlas database.
@@ -15,6 +14,7 @@ Users can log in or register using their credentials, with information securely 
 ![Screenshot 2024-05-03 215846](https://github.com/user-attachments/assets/8080eb92-83b1-46be-9908-6a62616d6e2e)
 
 <br>
+
 ## Home Page:
 <br>
 Users provide a comprehension passage and an answer to generate quiz questions.
