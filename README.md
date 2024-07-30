@@ -16,9 +16,9 @@ Users can log in or register using their credentials, with information securely 
 <br>
 
 ## Home Page:
-<br>
-Users provide a comprehension passage and an answer to generate quiz questions.
-<br>
+
+Users provide a comprehension passage and an answer to generate quiz questions.<br>
+
 
 ![Screenshot 2024-05-03 220341](https://github.com/user-attachments/assets/e323d5d3-d416-4890-b1d4-2f0b4ec9687f)
 
