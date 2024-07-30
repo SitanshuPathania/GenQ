@@ -1,0 +1,101 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    
+}
+
+.container2{
+    width:95%;
+    margin: auto;
+}
+
+header{
+    /* position:fixed; */
+    top:0;
+    left:0;
+    width:100%;
+    padding:20px 0px;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    color: white;
+    font-family:sans-serif;
+}
+
+body{
+    background-image: url('/static/img/Question_image.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+.nav-bar a{
+    text-decoration: none;
+    margin-left: 15px;
+    position: relative;
+    color: white;
+}
+
+.nav-bar a::after{
+    content: '';
+    position:absolute;
+    
+    left: 0;
+    bottom:-10px;
+    width:100%;
+    height:3px;
+    background: gray;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: transform.5s;
+}
+
+
+.nav-bar a:hover::after{
+    transform: scaleX(1);
+}
+
+h2{
+    text-align: center;
+    color: white;
+}
+.form{
+    border: 5px solid blue;
+    position: relative;
+    padding: 35px;
+    border-radius: 50px;
+    width:50%;
+    margin: auto;
+    color:white;
+}
+textarea{
+    color:black;
+    border-radius: 10px;
+}
+
+button{
+    display: flex;
+    margin: auto;
+    margin-top: 20px;
+    background-color: blue;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 20px;
+    color: white;
+}
+
+a{
+    text-decoration: none;
+}
+
+textarea{
+    width:100%;
+}
+
+@media screen and (max-width: 768px)
+{
+    .form{
+        width: 90%;
+    }
+}
