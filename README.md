@@ -7,7 +7,7 @@ User-Friendly Interface: Easily input text passages and review generated questio
 Seamless Experience: Designed to offer an intuitive and efficient user experience.
 <br>
 
-#Login Page:#
+# Login Page:
 <br>
 Users can log in or register using their credentials, with information securely stored in the MongoDB Atlas database.
 ![Screenshot 2024-05-03 215846](https://github.com/user-attachments/assets/8080eb92-83b1-46be-9908-6a62616d6e2e)
