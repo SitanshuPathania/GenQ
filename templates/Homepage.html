@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    
+    
+    <script src="https://kit.fontawesome.com/2d3ccaa5e7.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/static/css/reset.css">
+    
+</head>
+<body>
+    <div class="container2 mt-5">
+        <div class="flex space-between items-center">
+            <div>
+                <h1 class="logo text-3xl text-white"><b>GenQ</b></h1>
+            </div>
+            <nav class="nav-bar">
+                
+                <a href="/AboutUs.html">About Us</a>
+                <a href="/Feedback.html">Feedback</a>
+            </nav>
+            <div class="align-middle">
+                <button id="user" onclick="hideShow()">
+                    <i class="fa-solid fa-user fa-xl text-white"></i>
+                    <small class="pd-2 text-lg text-white">User</small>
+                    <i class="fa-solid fa-caret-down"></i>
+                    
+                </button>
+                <div>
+                    <a href="/index.html" id="logout" class="float-right bg-gray-400 p-1 rounded-lg mt-1 hover:bg-gray-200" >Logout</a>
+                </div>
+                
+            </div>
+            
+        </div>
+        
+        <form action="/process_form" method="POST">
+        <div class="text-center p-5">
+            <p class="text-gray-400 text-xl p-5"><b>Paste your comprehension in the area provided below:</b></p>
+            <textarea rows="10" cols="100" class="border-4 border-black w-3/5 resp-w" id="comprehension" name="para"></textarea>
+            <p class="text-gray-400 text-xl p-5"><b>Enter your answer in the area provided below:</b></p>
+            <textarea rows="2" cols="100" class="border-4 border-black w-3/5 resp-w" id="answer" name="ans"></textarea>
+            <br>
+            <button class="bg-blue-400 rounded-xl p-2 mt-5 hover:bg-blue-200" id="genBtn">Generate Questions</button>
+            <!-- <a href="/Homepage.html"><button class="bg-blue-400 rounded-xl pl-5 pr-5 pt-2 pb-2 mt-5 hover:bg-blue-200 ml-3">Clear</button></a> -->
+        </div>
+    </form>
+        <br>
+        <div class="text-center">
+            <a href="/trending.html"><button class="bg-blue-400 rounded-xl p-2 mt-5 hover:bg-blue-200 text-center" id="genBtn">Explore trending comprehensions</button></a>
+        </div>
+        <!-- <div class="text-center text-white hidden" id="ques">
+            <p>Ques1. What is the main idea of the passage?</p>
+            <br>
+            <p>Ques2. Who is the main character?</p>
+            <br>
+            <p>Ques3. Where does the story take place?</p>
+            <br>
+            <p>Ques4. What moral values did you learn from the above passage?</p>
+            <br>
+            <p>Ques5. Provide a suitable title for the above passage.</p>
+            <br>
+        </div> -->
+    </div>
+    
+
+    <script src="static/js/app2.js"></script>
+    <script src="https://kit.fontawesome.com/2d3ccaa5e7.js" crossorigin="anonymous"></script>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.2/dist/full.css" rel="stylesheet" type="text/css" /> -->
+    
+</body>
+</html>

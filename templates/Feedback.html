@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/css/styles3.css">
+</head>
+<body>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="alert alert-{{ category }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    <div class="container2">
+        <header>
+            <h1 class="logo">GenQ</h1>
+            <nav class="nav-bar">
+                <a href="/Homepage.html">Back</a>
+                
+            </nav>
+        </header>
+        <h2><b>Drop Us A Feedback</b></h2>
+        <br>
+        <div class="form">
+            <form action="/feedback" method="POST">
+                <p>Were you satisfied with the questions generated:</p>
+                <input type="radio" id="FullySatisfied" name="satisfaction">
+                <label for="FullySatisfied">Fully Satisfied</label>
+                <input type="radio" id="PartiallySatisfied" name="satisfaction">
+                <label for="PartiallySatisfied" name="satisfaction">Partially Satisfied</label>
+                <input type="radio" id="NotSatisfied" name="satisfaction">
+                <label for="NotSatisfied">Not Satisfied</label>
+                <br>
+                <br>
+                <p>How did you find the process of converting text to quiz:</p>
+                <input type="radio" id="VeryNice" name="Process">
+                <label for="VeryNice">Very Nice</label>
+                <input type="radio" id="Nice" name="Process">
+                <label for="Nice">Nice</label>
+                <input type="radio" id="NotNice" name="Process">
+                <label for="NotNice">Not Nice</label>
+                <br>
+                <br>
+                <p>How satisfied are you with the design and layout of the quiz creation interface</p>
+                <input type="radio" id="FullySatisfied2" name="satisfaction2">
+                <label for="FullySatisfied2">Fully Satisfied</label>
+                <input type="radio" id="PartiallySatisfied2" name="satisfaction2">
+                <label for="PartiallySatisfied2">Partially Satisfied</label>
+                <input type="radio" id="NotSatisfied2" name="satisfaction2">
+                <label for="NotSatisfied2">Not Satisfied</label>
+                <br>
+                <br>
+                <p>Did the website provide enough guidance or tooltips to help you along the way</p>
+                <input type="radio" id="Yes" name="Guidance">
+                <label for="Yes">Yes</label>
+                <input type="radio" id="No" name="Guidance">
+                <label for="No">No</label>
+                <br>
+                <br>
+                <p>How would you rate the speed and responsiveness of the website when creating answers</p>
+                <input type="radio" id="VeryFast" name="speed">
+                <label for="VeryFast">Very Fast</label>
+                <input type="radio" id="Fast" name="speed">
+                <label for="Fast">Fast</label>
+                <input type="radio" id="Slow" name="speed">
+                <label for="Slow">Slow</label>
+                <br>
+                <br>
+                <p>Were there any technical issues or bugs you encountered during the quiz creation process</p>
+                <input type="radio" id="Yes2" name="bugs">
+                <label for="Yes2">Yes</label>
+                <input type="radio" id="No2" name="bugs">
+                <label for="No2">No</label>
+                <br>
+                <br>
+                <p>Will you recommend this website to others</p>
+                <input type="radio" id="Yes3" name="recommend">
+                <label for="Yes3">Yes</label>
+                <input type="radio" id="No3" name="recommend">
+                <label for="No3">No</label>
+                <br>
+                <br>
+                <p>Please share below any additional comments or suggestions you have for us to improve the platform.</p>
+                <br>
+                <textarea rows="10" cols="50" name="comment" id="writtenFeedback"></textarea>
+                <button id="submission" type="Submit">Submit Feedback</button>
+            </form>
+            
+        </div>
+    </div>
+    <script src="/js/app3.js"></script>
+</body>
+</html>

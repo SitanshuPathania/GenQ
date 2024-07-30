@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trending Comprehensions</title>
+    <link rel="stylesheet" href="/static/css/styles5.css">
+</head>
+<body>
+    <h1 style="text-align:center">Trending Comprehensions</h1>
+    <ul>
+        {% for comprehension in comprehensions %}
+            <li>{{ comprehension.comprehension }}</li>
+            <br>
+        {% endfor %}
+    </ul>
+</body>
+</html>
