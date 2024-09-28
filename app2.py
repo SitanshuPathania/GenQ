@@ -6,7 +6,7 @@ import torch
 import pytorch_lightning as pl
 from flask import flash
 from flask import session
-from pytorch_lightning.callbacks import ModelCheckpoint
+
 from transformers import (
     AdamW,
     T5ForConditionalGeneration,
