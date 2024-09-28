@@ -11,6 +11,10 @@
       "src": "/(.*)",
       "dest": "app2.py"
     }
-  ]
+  ],
+  "env": {
+    "PYTHON_VERSION": "3.9"  // Set the desired Python version
+  }
 }
+
 
