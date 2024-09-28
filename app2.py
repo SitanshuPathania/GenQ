@@ -6,7 +6,7 @@ import torch
 import pytorch_lightning as pl
 from flask import flash
 from flask import session
-#from pytorch_lightning.callbacks import ModelCheckpoint
+from pytorch_lightning.callbacks import ModelCheckpoint
 
 from transformers import (
     AdamW,
@@ -190,12 +190,12 @@ class QGModel(pl.LightningModule):
     def configure_optimizers(self):
         return AdamW(self.parameters(), lr=LEARNING_RATE)
 
-#checkpoint_path = "./models/best-checkpoint-v4.ckpt"
-#QGmodel = QGModel.load_from_checkpoint(checkpoint_path, map_location=torch.device('cpu'))
-#QGmodel.freeze()
-#checkpoint_path = "./models/best-checkpoint-v16.ckpt"
-#DstrModel = QGModel.load_from_checkpoint(checkpoint_path, map_location=torch.device('cpu'))
-#DstrModel.freeze()
+checkpoint_path = "./models/best-checkpoint-v4.ckpt"
+QGmodel = QGModel.load_from_checkpoint(checkpoint_path, map_location=torch.device('cpu'))
+QGmodel.freeze()
+checkpoint_path = "./models/best-checkpoint-v16.ckpt"
+DstrModel = QGModel.load_from_checkpoint(checkpoint_path, map_location=torch.device('cpu'))
+DstrModel.freeze()
 
 def generateQuestion(qgmodel: QGModel, answer: str, context: str) -> str:
     source_encoding = tokenizer(
