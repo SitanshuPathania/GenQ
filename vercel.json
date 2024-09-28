@@ -1,0 +1,8 @@
+{
+  "builds": [
+    {
+      "src": "app.py",  // or the entry point of your flask app
+      "use": "@vercel/python"
+    }
+  ]
+}
