@@ -10,6 +10,7 @@ from transformers import (
     T5TokenizerFast as T5Tokenizer
 )
 import gdown  # Add this import for Google Drive access
+import os
 
 app = Flask(__name__)
 app.secret_key = '5234'
@@ -35,8 +36,11 @@ QG_MODEL_CHECKPOINT_PATH = './models/best-checkpoint-v4.ckpt'
 DSTR_MODEL_CHECKPOINT_PATH = './models/best-checkpoint-v16.ckpt'
 
 # Download models if they don't exist
-download_model_from_drive(QG_MODEL_CHECKPOINT_ID, QG_MODEL_CHECKPOINT_PATH)
-download_model_from_drive(DSTR_MODEL_CHECKPOINT_ID, DSTR_MODEL_CHECKPOINT_PATH)
+if not os.path.exists(QG_MODEL_CHECKPOINT_PATH):
+    download_model_from_drive(QG_MODEL_CHECKPOINT_ID, QG_MODEL_CHECKPOINT_PATH)
+
+if not os.path.exists(DSTR_MODEL_CHECKPOINT_PATH):
+    download_model_from_drive(DSTR_MODEL_CHECKPOINT_ID, DSTR_MODEL_CHECKPOINT_PATH)
 
 # Defining routes
 @app.route('/register', methods=['POST'])
